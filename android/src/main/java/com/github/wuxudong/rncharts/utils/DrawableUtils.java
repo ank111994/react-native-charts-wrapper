@@ -47,11 +47,20 @@
                     }
                     Bitmap bitmap = x;
                     int padding = 80;
-                    int strokeWidth = 10;
+                    int strokeWidth = 18;
                     int bitmapSize = Math.max(bitmap.getWidth(), bitmap.getHeight()) + padding + strokeWidth;
                     Bitmap workingBitmap = Bitmap.createBitmap(bitmapSize, bitmapSize,
                             Bitmap.Config.ARGB_8888);
                     Canvas canvas = new Canvas(workingBitmap);
+                    Paint paint1 = new Paint();
+                    paint1.setAntiAlias(true);
+                    paint1.setColor(Color.WHITE);
+                    paint1.setStyle(Paint.Style.FILL);
+                    int centerCoordinate = bitmapSize / 2;
+
+                    canvas.drawCircle(centerCoordinate, centerCoordinate,
+                            centerCoordinate - (strokeWidth / 2.0f), paint1);
+
 
                     Paint paint = new Paint();
                     paint.setAntiAlias(true);
@@ -63,7 +72,7 @@
                     canvas.drawBitmap(bitmap, (bitmapSize - bitmap.getWidth()) / 2.0f,
                             (bitmapSize - bitmap.getHeight()) / 2.0f, paint);
 
-                    int centerCoordinate = bitmapSize / 2;
+                   // int centerCoordinate = bitmapSize / 2;
 
                     canvas.drawCircle(centerCoordinate, centerCoordinate,
                             centerCoordinate - (strokeWidth / 2.0f), paint);
@@ -99,14 +108,21 @@
                     Bitmap bitmap = x;
 
 
-                    int padding = 40;
-                    int strokeWidth = 6;
+                    int padding = 80;
+                    int strokeWidth = 18;
 
                     int bitmapSize = Math.max(bitmap.getWidth(), bitmap.getHeight()) + padding + strokeWidth;
                     Bitmap workingBitmap = Bitmap.createBitmap(bitmapSize, bitmapSize,
                             Bitmap.Config.ARGB_8888);
                     Canvas canvas = new Canvas(workingBitmap);
+                    Paint paint1 = new Paint();
+                    paint1.setAntiAlias(true);
+                    paint1.setColor(Color.WHITE);
+                    paint1.setStyle(Paint.Style.FILL);
+                    int centerCoordinate = bitmapSize / 2;
 
+                    canvas.drawCircle(centerCoordinate, centerCoordinate,
+                            centerCoordinate - (strokeWidth / 2.0f), paint1);
                     Paint paint = new Paint();
                     paint.setAntiAlias(true);
                     paint.setColor(Color.parseColor(strings[3]));
@@ -117,7 +133,7 @@
                     canvas.drawBitmap(bitmap, (bitmapSize - bitmap.getWidth()) / 2.0f,
                             (bitmapSize - bitmap.getHeight()) / 2.0f, paint);
 
-                    int centerCoordinate = bitmapSize / 2;
+                   // int centerCoordinate = bitmapSize / 2;
 
                     canvas.drawCircle(centerCoordinate, centerCoordinate,
                             centerCoordinate - (strokeWidth / 2.0f), paint);
